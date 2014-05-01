@@ -2,7 +2,7 @@ require('co-mocha');
 
 var moko = require('moko'),
     expect = require('expect.js'),
-    slug = requite('../');
+    slug = require('../');
 
 describe('moko-slug', function() {
   describe('simple attributes', function() {
