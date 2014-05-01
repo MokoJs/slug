@@ -1,0 +1,32 @@
+{
+  "name": "moko-slug",
+  "version": "0.1.0",
+  "description": "slug plugin for moko",
+  "main": "index.js",
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/MokoJs/moko"
+  },
+  "keywords": [
+    "moko",
+    "moko",
+    "plugin",
+    "moko-plugin",
+    "slug"
+  ],
+  "author": "Ryan Schmukler <ryan@slingingcode.com> (http://slingingcode.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MokoJs/moko/issues"
+  },
+  "homepage": "https://github.com/MokoJs/moko",
+  "devDependencies": {
+    "moko": "^0.1.0",
+    "expect.js": "^0.3.1",
+    "mocha": "^1.18.2",
+    "co-mocha": "0.0.2"
+  }
+}
