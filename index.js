@@ -20,6 +20,14 @@ module.exports = function(attrs, fmt) {
           });
         });
       } else {
+        Model.on('initialize', function(model) {
+          if(!model.slug) model.slug = slugify(fmt(model));
+        });
+        attrs.forEach(function(attr) {
+          Model.on('change ' + attr, function(model) {
+            model.slug = slugify(fmt(model));
+          });
+        });
       }
     };
     function formatString(model) {

@@ -43,7 +43,23 @@ describe('moko-slug', function() {
   });
 
   describe('format functions', function() {
-    it('works on instantiation');
-    it('works on change');
+    before(function() {
+      Article = moko('Article').attr('title').attr('author');
+      Article.use(slug(['title', 'author'], function(article) {
+        if(article.author) return article.title + ' by ' + article.author;
+        return article.title;
+      }));
+    });
+    it('works on instantiation', function*() {
+      var post = yield new Article({title: 'some title'});
+      expect(post.slug).to.be('some-title');
+    });
+    it('works on change', function*() {
+      var post = yield new Article();
+      post.title = 'some title';
+      expect(post.slug).to.be('some-title');
+      post.author = 'Ryan';
+      expect(post.slug).to.be('some-title-by-ryan');
+    });
   });
 });
