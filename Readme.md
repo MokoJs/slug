@@ -39,7 +39,7 @@ var Blog = moko('blog')
   b.slug;
   // => 'some-blog-post-by-'
 
-  b.author('Ryan S.');
+  b.author = 'Ryan S.';
   b.slug();
   // => 'some-blog-post-by-ryan-s'
 
@@ -72,7 +72,7 @@ var getBlogSlug = function(blog) {
   b.slug;
   // => 'some-blog-post'
 
-  b.author= 'Ryan S.';
+  b.author = 'Ryan S.';
   b.slug;
   // => 'some-blog-post-by-ryan-s'
 
